@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass 2 Q1</title>
+    <style>
+        /* Element Selector */
+        p {
+            color: #da1f1f;
+            line-height: 1.6;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: #00d0ff;
+            padding: 5px;
+        }
+
+        /* ID Selector */
+        #Title {
+            color: #00cc30;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* Attribute Selector */
+        a[target="link"] {
+            color: #009900;
+            text-decoration: none;
+        }
+
+        /* Pseudo-class Selector */
+        li:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* Pseudo-element Selector */
+        p::first-letter {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="Title">QUESTION 1</h1>
+    
+    <p>This is a paragraph styled using an element selector. The first letter is styled using a pseudo-element selector.</p>
+    
+    <p class="highlight">Class selector</p>
+    
+    <h2>List of Items</h2>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+    </ul>
+    
+    <p>Link : <a href="https://www.imdb.com/" target="link">IMDB</a> -> attribute selector</p>
+    
+    <p>Hover over this text to see a <span class="highlight">pseudo-class</span> selector in action.</p>
+</body>
+</html>

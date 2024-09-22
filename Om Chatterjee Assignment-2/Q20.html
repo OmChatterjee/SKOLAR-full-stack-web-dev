@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Framework</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url("https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg") no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Layout Grid System */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: #fff;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Custom form styling */
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 40px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #fff;
+            padding: 0 10px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Custom button styling */
+        .btn-custom {
+            display: inline-block;
+            width: 100%;
+            height: 50px;
+            background-color: #b70505;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #8a0505;
+        }
+
+        /* Group links */
+        .group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .group a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .group a:hover {
+            color: rgb(125, 55, 31);
+        }
+
+        #result {
+            color: red;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        /* Custom Popup */
+        .popup {
+            background-color: #fff;
+            border-radius: 6px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform .4s, top .4s;
+            visibility: hidden;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            color: #000;
+        }
+
+        .popup .checkmark {
+            font-size: 50px;
+            color: #00ff00;
+            margin: 20px 0;
+        }
+
+        .popup button {
+            width: 100%;
+            background: #00ff00;
+            padding: 10px 0;
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            color: #000;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .open-slide {
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            visibility: visible;
+        }
+
+        .popup h2 {
+            font-weight: 500;
+            font-size: 28px;
+            margin: 20px 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="" name="Formfill" onsubmit="return validation()">
+                <h2>Register</h2>
+                <p id="result"></p>
+                <div class="input-box">
+                    <span class="icon-placeholder">&#128100;</span> <!-- Custom Icon using Unicode -->
+                    <input type="text" name="Username" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <span class="icon-placeholder">&#9993;</span> <!-- Custom Icon using Unicode -->
+                    <input type="email" name="Email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <span class="icon-placeholder">&#128274;</span> <!-- Custom Icon using Unicode -->
+                    <input type="password" name="Password" placeholder="Password">
+                </div>
+                <div class="input-box">
+                    <span class="icon-placeholder">&#128274;</span> <!-- Custom Icon using Unicode -->
+                    <input type="password" name="CPassword" placeholder="Confirm Password">
+                </div>
+                <div class="button">
+                    <input type="submit" class="btn-custom" value="Register">
+                </div>
+                <div class="group">
+                    <span><a href="#">Forget Password</a></span>
+                    <span><a href="#">Login</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="checkmark">&#10003;</div> <!-- Custom Checkmark -->
+        <h2>Thank You</h2>
+        <p>You have registered successfully!</p>
+        <a href="#"><button onclick="CloseSlide()">OK</button></a>
+    </div>
+
+    <script>
+        function validation() {
+            var username = document.Formfill.Username.value;
+            var email = document.Formfill.Email.value;
+            var password = document.Formfill.Password.value;
+            var cPassword = document.Formfill.CPassword.value;
+
+            if (username == "") {
+                document.getElementById("result").innerHTML = "Enter Username*";
+                return false;
+            } else if (username.length < 8) {
+                document.getElementById("result").innerHTML = "At least Eight letters*";
+                return false;
+            } else if (email == "") {
+                document.getElementById("result").innerHTML = "Enter your Email";
+                return false;
+            } else if (password == "") {
+                document.getElementById("result").innerHTML = "Enter Password";
+                return false;
+            } else if (password.length < 6) {
+                document.getElementById("result").innerHTML = "Password must be 6-digits";
+                return false;
+            } else if (cPassword == "") {
+                document.getElementById("result").innerHTML = "Enter Confirm Password";
+                return false;
+            } else if (cPassword !== password) {
+                document.getElementById("result").innerHTML = "Password doesn't match";
+                return false;
+            } else {
+                localStorage.setItem('registeredUsername', username);
+                localStorage.setItem('registeredPassword', password);
+
+                document.getElementById('popup').classList.add("open-slide");
+                return false;
+            }
+        }
+
+        function CloseSlide() {
+            document.getElementById('popup').classList.remove('open-slide');
+        }
+    </script>
+</body>
+
+</html>

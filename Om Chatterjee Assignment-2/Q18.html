@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ass 2 Q18</title>
+    <style>
+      :root {
+        --font-family: Arial, sans-serif;
+        --bg-color: #9ad8e1;
+        --form-bg-color: white;
+        --input-border-color: #ccc;
+        --button-bg-color: lightblue;
+        --button-active-bg-color: darkblue;
+        --link-color: #007bff;
+        --valid-border-color: #42cf63;
+        --invalid-border-color: #dc3545;
+        --valid-shadow: rgba(40, 167, 69, 0.5);
+        --invalid-shadow: rgba(163, 68, 77, 0.5);
+        --focus-shadow: rgba(14, 118, 229, 0.5);
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--bg-color);
+        margin: 0;
+        padding: 20px;
+      }
+
+      form {
+        background-color: var(--form-bg-color);
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 400px;
+        margin: auto;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      select {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid var(--input-border-color);
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: var(--link-color);
+        outline: none;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      button {
+        background-color: var(--button-bg-color);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: var(--link-color);
+      }
+
+      button:active {
+        background-color: var(--button-active-bg-color);
+      }
+
+      input::placeholder {
+        color: gray;
+        font-style: italic;
+      }
+
+      input:valid,
+      select:valid {
+        border-color: var(--valid-border-color);
+        box-shadow: 0 0 5px var(--valid-shadow);
+      }
+
+      input:invalid,
+      select:invalid {
+        border-color: var(--invalid-border-color);
+        box-shadow: 0 0 5px var(--invalid-shadow);
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h1::before {
+        content: "*";
+      }
+
+      h1::after {
+        content: "*";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sample Form</h1>
+    <form action="submit-form">
+      <label for="fname">Username:</label><br />
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Enter your username"
+        required
+      /><br />
+      <label for="lname">Email address:</label><br />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="eg.- omchatt21@gmail.com"
+        required
+      /><br />
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass" required /><br /><br />
+      <select id="Country" name="Country" required>
+        <option value="" disabled selected>Select a Country</option>
+        <option value="india">India</option>
+        <option value="china">China</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="afghanistan">Afghanistan</option>
+        <option value="sri lanka">Sri Lanka</option>
+        <option value="bangladesh">Bangladesh</option>
+        <option value="nepal">Nepal</option>
+        <option value="bhutan">Bhutan</option>
+        <option value="others">Others</option>
+      </select>
+      <input type="checkbox" id="terms" name="terms" required />
+      <label for="terms"
+        >I agree to the
+        <a href="terms.html" target="_blank">Terms and Conditions</a></label
+      ><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

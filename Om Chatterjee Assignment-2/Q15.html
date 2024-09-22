@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ass 2 Q15</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f8f9fa;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: repeat(2, 160px);
+                grid-gap: 15px;
+            }
+
+            .box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 160px;
+                height: 160px;
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.2rem;
+                border-radius: 12px;
+                transition: transform 0.4s ease;
+            }
+
+            .box-translate {
+                background-color: #ff6f61;
+            }
+
+            .box-translate:hover {
+                transform: translate(45px, 40px);
+            }
+
+            .box-rotate {
+                background-color: #20b2aa;
+            }
+
+            .box-rotate:hover {
+                transform: rotate(120deg);
+            }
+
+            .box-scale {
+                background-color: #6495ed;
+            }
+
+            .box-scale:hover {
+                transform: scale(1.8);
+            }
+
+            .box-skew {
+                background-color: #ffa500;
+            }
+
+            .box-skew:hover {
+                transform: skew(25deg, 15deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box-translate">Box 1<br>(Move)</div>
+            <div class="box box-rotate">Box 2<br>(Spin)</div>
+            <div class="box box-scale">Box 3<br>(Zoom)</div>
+            <div class="box box-skew">Box 4<br>(Tilt)</div>
+        </div>
+    </body>
+</html>

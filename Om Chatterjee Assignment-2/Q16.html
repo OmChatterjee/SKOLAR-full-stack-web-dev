@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ass 2 Q16</title>
+        <style>
+            body {
+                font-family: 'Verdana', sans-serif;
+                background-color: #88ff00;
+                margin: 0;
+                padding: 30px;
+            }
+
+            form {
+                background-color: #fff;
+                padding: 25px;
+                border-radius: 10px;
+                max-width: 450px;
+                margin: auto;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            label, select {
+                font-weight: bold;
+                margin-bottom: 8px;
+                display: block;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 12px;
+                margin: 12px 0;
+                border: 1px solid #999;
+                border-radius: 6px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+
+            input[type="text"]:focus,
+            input[type="password"]:focus {
+                border-color: #1A73E8;
+                outline: none;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 8px;
+            }
+
+            button {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 12px 18px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 1rem;
+                width: 100%;
+                transition: background-color 0.4s;
+            }
+
+            button:hover {
+                background-color: #45A049;
+            }
+
+            button:active {
+                background-color: #3E8C43;
+            }
+
+            a {
+                color: #1A73E8;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            h1::before {
+                content: "~";
+                padding-right: 5px;
+            }
+
+            h1::after {
+                content: "~";
+                padding-left: 5px;
+            }
+
+            input::placeholder {
+                color: #888;
+                font-style: italic;
+            }
+
+            select option:first-child {
+                font-weight: bold;
+                color: #fff;
+                background-color: #1A73E8;
+            }
+
+            select option:nth-child(4) {
+                font-weight: bold;
+                color: white;
+                background-color: #D32F2F;
+            }
+
+            select option:last-child {
+                font-weight: bold;
+                color: white;
+                background-color: #43A047;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form action="submit-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+
+            <label for="email">Email address:</label>
+            <input type="text" id="email" name="email" placeholder="example@example.com">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select your country</option>
+                <option value="india">India</option>
+                <option value="china">China</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="afghanistan">Afghanistan</option>
+                <option value="sri_lanka">Sri Lanka</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="nepal">Nepal</option>
+                <option value="bhutan">Bhutan</option>
+                <option value="others">Others</option>
+            </select>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a></label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

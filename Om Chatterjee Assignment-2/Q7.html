@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass 2 Q7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            grid-gap: 20px;
+            grid-template-areas:
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #3498db;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">
+            <h1>Header</h1>
+        </div>
+        <div class="grid-item sidebar">
+            <h2>Sidebar</h2>
+            <p>Navigation links could go here.</p>
+        </div>
+        <div class="grid-item main">
+            <h2>Main Content</h2>
+            <p>This is the main content area of the grid layout.</p>
+        </div>
+        <div class="grid-item footer">
+            <h2>Footer</h2>
+            <p>Footer content goes here.</p>
+        </div>
+    </div>
+</body>
+</html>

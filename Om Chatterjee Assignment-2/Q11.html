@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ass 2 Q11</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: Verdana, sans-serif;
+                margin: 25px;
+                line-height: 1.5;
+            }
+
+            .box {
+                padding: 25px;
+                margin-bottom: 25px;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+
+            .static-box {
+                position: static;
+                background-color: teal;
+            }
+
+            .relative-box {
+                position: relative;
+                background-color: steelblue;
+                top: 25px; 
+            }
+
+            .absolute-box {
+                position: absolute;
+                top: 80px; 
+                left: 35px;
+                background-color: crimson;
+                width: 450px;
+            }
+
+            .fixed-box {
+                position: fixed;
+                top: 40px;
+                right: 40px;
+                background-color: goldenrod;
+                width: 220px;
+                z-index: 10;
+            }
+
+            .sticky-box {
+                position: sticky;
+                top: 10px;
+                background-color: darkviolet;
+            }
+
+            .content-area {
+                height: 1800px;
+                background-color: lightcoral;
+                padding: 40px;
+                font-size: 1.1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box static-box">
+            Static Positioned Box
+        </div>
+
+        <div class="box relative-box">
+            Relative Positioned Box
+        </div>
+
+        <div class="box absolute-box">
+            Absolute Positioned Box
+        </div>
+
+        <div class="box fixed-box">
+            Fixed Positioned Box
+        </div>
+
+        <div class="box sticky-box">
+            Sticky Positioned Box
+        </div>
+
+        <div class="content-area">
+            Hello! My name is Om 
+        </div>
+    </body>
+</html>

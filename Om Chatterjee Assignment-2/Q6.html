@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass 2 Q6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+            padding: 20px;
+            gap: 20px;
+        }
+        .box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            flex-basis: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .sidebar {
+            flex-basis: 200px;
+            background-color: #2ecc71;
+            color: white;
+        }
+        .main-content {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            flex-basis: calc(33.333% - 20px);
+            min-width: 200px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        .footer {
+            flex-basis: 100%;
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                flex-basis: 100%;
+                order: -1;
+            }
+            .card {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header box">
+            <h1>Complex Flexbox Layout</h1>
+        </header>
+        <aside class="sidebar box">
+            <h2>Sidebar</h2>
+            <p>This is a sidebar with a fixed width.</p>
+        </aside>
+        <main class="main-content">
+            <div class="card box">Card 1</div>
+            <div class="card box">Card 2</div>
+            <div class="card box">Card 3</div>
+            <div class="card box">Card 4</div>
+            <div class="card box">Card 5</div>
+            <div class="card box">Card 6</div>
+        </main>
+        <footer class="footer box">
+            <p>Footer content goes here</p>
+        </footer>
+    </div>
+</body>
+</html>

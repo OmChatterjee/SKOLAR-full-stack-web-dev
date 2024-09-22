@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ass 2 Q2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #9c27b0, #e91e63, #f44336);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .text-color p {
+            margin: 10px 0;
+        }
+        .text-red { color: #ff0000; }
+        .text-blue { color: #0000ff; }
+        .text-green { color: #00ff00; }
+        .text-yellow { color: #ffff00; }
+        .bg-color div {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        .bg-red { background-color: #ff0000; }
+        .bg-blue { background-color: #0000ff; }
+        .bg-green { background-color: #00ff00; }
+        .bg-yellow { background-color: #ffff00; }
+        .gradient-demo div {
+            height: 100px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .gradient-1 {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+        }
+        .gradient-2 {
+            background: radial-gradient(circle, #ff9a9e, #fad0c4, #ffecd2);
+        }
+        .bg-image-demo {
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+        }
+        .bg-repeat-demo {
+            height: 200px;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-repeat: repeat;
+            border-radius: 4px;
+        }
+        .bg-position-demo {
+            display: flex;
+            gap: 10px;
+        }
+        .bg-position-demo div {
+            flex: 1;
+            height: 150px;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            border-radius: 4px;
+        }
+        .bg-top-left { background-position: top left; }
+        .bg-bottom-right { background-position: bottom right; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Colors</h1>
+        <div class="grid">
+            <div class="card text-color">
+                <h2>Text Color</h2>
+                <p class="text-red">This text is red.</p>
+                <p class="text-blue">This text is blue.</p>
+                <p class="text-green">This text is green.</p>
+                <p class="text-yellow">This text is yellow.</p>
+            </div>
+            <div class="card bg-color">
+                <h2>Background Color</h2>
+                <div class="bg-red"></div>
+                <div class="bg-blue"></div>
+                <div class="bg-green"></div>
+                <div class="bg-yellow"></div>
+            </div>
+            <div class="card gradient-demo">
+                <h2>Gradients</h2>
+                <div class="gradient-1"></div>
+                <div class="gradient-2"></div>
+            </div>
+            <div class="card">
+                <h2>Background Image</h2>
+                <div class="bg-image-demo"></div>
+            </div>
+            <div class="card">
+                <h2>Background Repeat</h2>
+                <div class="bg-repeat-demo"></div>
+            </div>
+            <div class="card">
+                <h2>Background Position</h2>
+                <div class="bg-position-demo">
+                    <div class="bg-top-left"></div>
+                    <div class="bg-bottom-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
